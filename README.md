@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Mockup Assignments
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React web application that provides a platform for managing projects. Users can view, filter, and update the status of various projects.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+Check out the live demo [here](https://mockup-assignments.netlify.app/).
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- View a list of projects with details such as client name, address, installation timeline, and status.
+- Filter projects by status (All, Matched, Submitted, Closed, Rejected).
+- Update the status of a project (Matched, Submitted, Closed, Rejected).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## File Structure
 
-### `npm test`
+```
+|-- src
+    |-- components
+        |-- EntireComponent.js
+        |-- ProjectListComponent.js
+        |-- ProjectListing.js
+        |-- TabsComponent.js
+    |-- hooks
+        |-- useProjectsStore.js
+    |-- App.js
+|-- public
+|-- package.json
+|-- ...
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `src/components`
 
-### `npm run build`
+- `EntireComponent.js`: The main component that organizes the entire application structure.
+- `ProjectListComponent.js`: Component responsible for rendering the list of projects.
+- `ProjectListing.js`: Component for displaying individual project details.
+- `TabsComponent.js`: Component for rendering the tabs used for filtering projects.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `src/hooks`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `useProjectsStore.js`: A custom hook created using Zustand for managing the state of projects.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `src/App.js`
 
-### `npm run eject`
+The entry point of the application where components are imported and rendered.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `public`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contains static assets like images, if any.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `package.json`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Contains project metadata and dependencies.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Start the development server with `npm start`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Dependencies
 
-### Code Splitting
+- `@mui/base`: Material-UI core components.
+- `@mui/material`: Material-UI components.
+- `@mui/system`: Material-UI system utilities.
+- `zustand`: State management library for React.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+If you'd like to contribute, please fork the repository and create a pull request. Feel free to open an issue if you have any suggestions or find any bugs.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+This project is licensed under the [MIT License](LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to add or modify any sections to provide additional information about your project. Make sure to replace the placeholders with actual content.
