@@ -8,7 +8,6 @@ import { Tab as BaseTab, tabClasses } from "@mui/base/Tab";
 import TabsComponent from "./TabsComponent";
 import useProjectsStore from "../useProjectsStore";
 import ProjectListComponent from "./ProjectListComponent";
-import { lightGreen } from "@mui/material/colors";
 import { Typography } from "@mui/material";
 
 export default function UnstyledTabsIntroduction() {
@@ -37,7 +36,7 @@ export default function UnstyledTabsIntroduction() {
       </TabsList>
       <Typography variant='h3' align='left' gutterBottom>
         <span style={{ color: "#00e676" }}>{totalSubmittedAndClosed}</span>{" "}
-        projects shared to you!
+        projects shared with you!
       </Typography>
       <TabPanel value={0}>
         <TabsComponent
@@ -52,7 +51,7 @@ export default function UnstyledTabsIntroduction() {
         />
       </TabPanel>
       <TabPanel value={1}>Profile page</TabPanel>
-      <TabPanel value={2}>Language page</TabPanel>
+      <TabPanel value={2}>Activity page</TabPanel>
     </Tabs>
   );
 }
@@ -90,21 +89,30 @@ const Tab = styled(BaseTab)`
     opacity: 0.5;
     cursor: not-allowed;
   }
+
+  @media (max-width: 600px) {
+    width: auto;
+    padding: 8px 10px;
+  }
 `;
 
 const TabPanel = styled(BaseTabPanel)`
   width: 100%;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 0.875rem;
+
+  @media (max-width: 600px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const TabsList = styled(BaseTabsList)(
   ({ theme }) => `
-  width:400px;
-  min-width: 400px;
+  width: 100%;
+  min-width: 100%;
   background-color: ${"#ffff"};
   border-radius: 12px;
-    outline: 1px solid #00c853;
+  outline: 1px solid #00c853;
   margin-top : 30px;
   margin-bottom: 16px;
   display: flex;
@@ -112,5 +120,9 @@ const TabsList = styled(BaseTabsList)(
   justify-content: center;
   align-content: space-between;
   box-shadow: 0px 4px 30px ${theme.palette.mode === "dark" ? "#fff" : "#fff"};
+  
+  @media (max-width: 600px) {
+    min-width: auto;
+  }
   `
 );
